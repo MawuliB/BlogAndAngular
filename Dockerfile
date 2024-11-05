@@ -13,8 +13,8 @@ FROM openjdk:24-ea-17-jdk-oracle
 
 WORKDIR /app
 
-COPY --from=build /app/target/*.jar /app
+COPY --from=build /app/target/*.jar app.jar
 
 EXPOSE 2020
 
-CMD ["java", "-jar", "blog-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "app.jar"]

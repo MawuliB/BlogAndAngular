@@ -4,8 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-COPY .env .
-
 RUN mvn clean package -DskipTests
 
 
